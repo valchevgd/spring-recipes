@@ -104,17 +104,17 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes guacaNotes = new Notes();
         guacaNotes.setRecipeNotes("A lot of notes...");
-        guacaNotes.setRecipe(guacRecipe);
+
         guacRecipe.setNotes(guacaNotes);
 
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(".5"), teaspoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("fresh lime juice", new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chiles", new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Cilantro", new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("black pepper", new BigDecimal(2), dashUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom, guacRecipe));
+        guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), teaspoonUom));
+        guacRecipe.addIngredient(new Ingredient("fresh lime juice", new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredient(new Ingredient("minced red onion", new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredient(new Ingredient("serrano chiles", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("Cilantro", new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredient(new Ingredient("black pepper", new BigDecimal(2), dashUom));
+        guacRecipe.addIngredient(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
@@ -130,15 +130,15 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes tacoNotes = new Notes();
         tacoNotes.setRecipeNotes("A lot of notes...");
-        tacoNotes.setRecipe(tacoRecipe);
+
         tacoRecipe.setNotes(tacoNotes);
 
-        tacoRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("Kosher salt", new BigDecimal(".5"), teaspoonUom, tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("fresh lime juice", new BigDecimal(2), tablespoonUom, tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tablespoonUom, tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("black pepper", new BigDecimal(2), dashUom, tacoRecipe));
-        tacoRecipe.getIngredients().add(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom, tacoRecipe));
+        tacoRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        tacoRecipe.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), teaspoonUom));
+        tacoRecipe.addIngredient(new Ingredient("fresh lime juice", new BigDecimal(2), tablespoonUom));
+        tacoRecipe.addIngredient(new Ingredient("minced red onion", new BigDecimal(2), tablespoonUom));
+        tacoRecipe.addIngredient(new Ingredient("black pepper", new BigDecimal(2), dashUom));
+        tacoRecipe.addIngredient(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom));
 
         tacoRecipe.getCategories().add(americanCategory);
         tacoRecipe.getCategories().add(mexicanCategory);
