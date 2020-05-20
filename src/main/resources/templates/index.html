@@ -31,20 +31,24 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Description</th>
+                                <th>View</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr th:remove="all">
-                                <td th:text="${recipe.getId()}">123</td>
-                                <td th:text="${recipe.getDescription()}">First</td>
+                                <td>123</td>
+                                <td>First</td>
+                                <td><a href="#"></a></td>
                             </tr>
                             <tr th:remove="all">
-                                <td th:text="${recipe.getId()}">123</td>
-                                <td th:text="${recipe.getDescription()}">First</td>
+                                <td>321</td>
+                                <td>Second</td>
+                                <td><a href="#"></a></td>
                             </tr>
                             <tr th:each="recipe : ${recipes}">
                                 <td th:text="${recipe.getId()}"></td>
                                 <td th:text="${recipe.getDescription()}"></td>
+                                <td><a href="#" th:href="@{'/recipe/show/' + ${recipe.getId()}}">View</a></td>
                             </tr>
                             </tbody>
                         </table>
